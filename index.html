@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alpha Studios</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+  <header>
+  <a href="#" class="logo">
+    <img src="assets/img/logo1.png" alt="Logo Alpha" />
+    Alpha Studios
+  </a>
+
+  <nav id="menu">
+    <a href="#">Início</a>
+    <a href="#jogos">Jogos</a>
+    <a href="#noticias">Notícias</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <!-- Botão hamburguer -->
+  <div class="menu-toggle" id="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+
+  <main>
+    <section id="trailer">
+  <h2>Trailers de Lançamento</h2>
+  <p>Confira os trailers oficiais dos nossos jogos mais aguardados!</p>
+
+  <div class="carrossel">
+    <button class="btn anterior">&#10094;</button>
+
+    <div class="carrossel-container">
+      <iframe src="https://www.youtube.com/embed/RvO72nOIIDQ" title="Trailer 1" allowfullscreen></iframe>
+      <iframe width="1080" height="608" src="https://www.youtube.com/embed/Ue1Yo-3QnRc" title="Mortal Kombat 1: Trailer de Revelação (dublado PT-BR)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="1080" height="608" src="https://www.youtube.com/embed/_MM4clV2qjE" title="TEKKEN 8 – OFFICIAL LAUNCH TRAILER" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+
+    <button class="btn proximo">&#10095;</button>
+  </div>
+</section>
+
+
+    <section id="jogos">
+      <h3>Lista de Jogos</h3>
+      <div id="categoria-selecionada">Todas</div>
+
+      <div id="filtros">
+        <button data-categoria="todas" class="active">Todas</button>
+        <button data-categoria="acao">Ação</button>
+        <button data-categoria="aventura">Aventura</button>
+        <button data-categoria="rpg">RPG</button>
+      </div>
+
+      <div class="lista-jogos">
+        <!-- AÇÃO -->
+<div class="card-jogo" data-categoria="acao">
+  <img src="https://files.tecnoblog.net/wp-content/uploads/2022/01/valorant.jpg" alt="Valorant" />
+  <h4>Valorant</h4>
+  <p>Jogo de tiro tático em primeira pessoa, focado em habilidades e trabalho em equipe.</p>
+</div>
+
+<div class="card-jogo" data-categoria="acao">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/730/capsule_616x353.jpg" alt="CS:GO" />
+  <h4>Counter-Strike: Global Offensive</h4>
+  <p>Clássico FPS competitivo com equipes de terroristas e contra-terroristas.</p>
+</div>
+
+<div class="card-jogo" data-categoria="acao">
+  <img src="https://image.api.playstation.com/vulcan/ap/rnd/202010/0114/b4Q1XWYaTdJLUvRuALuqr0wP.png" alt="DOOM Eternal" />
+  <h4>DOOM Eternal</h4>
+  <p>FPS frenético com muita ação, demônios e combates intensos.</p>
+</div>
+
+<div class="card-jogo" data-categoria="acao">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/346110/capsule_616x353.jpg" alt="ARK: Survival Evolved" />
+  <h4>ARK: Survival Evolved</h4>
+  <p>Sobrevivência em mundo aberto com dinossauros e construção.</p>
+</div>
+
+<div class="card-jogo" data-categoria="acao">
+  <img src="https://upload.wikimedia.org/wikipedia/pt/e/ee/Terraria_capa.png" alt="Terraria" />
+  <h4>Terraria</h4>
+  <p>Jogo de ação e aventura 2D com exploração, construção e combate.</p>
+</div>
+
+<div class="card-jogo" data-categoria="acao">
+  <img src="https://upload.wikimedia.org/wikipedia/pt/a/ad/Apex_legends_capa.jpg" alt="Apex Legends" />
+  <h4>Apex Legends</h4>
+  <p>Battle royale rápido com personagens com habilidades únicas.</p>
+</div>
+
+<!-- AVENTURA -->
+<div class="card-jogo" data-categoria="aventura">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/264710/capsule_616x353.jpg" alt="Subnautica" />
+  <h4>Subnautica</h4>
+  <p>Exploração subaquática em um planeta alienígena, com crafting e sobrevivência.</p>
+</div>
+
+<div class="card-jogo" data-categoria="aventura">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/305620/capsule_616x353.jpg" alt="The Long Dark" />
+  <h4>The Long Dark</h4>
+  <p>Sobrevivência na natureza selvagem em um mundo frio e implacável.</p>
+</div>
+
+<div class="card-jogo" data-categoria="aventura">
+  <img src="https://upload.wikimedia.org/wikipedia/pt/a/aa/Firewatch_capa2.jpg" alt="Firewatch" />
+  <h4>Firewatch</h4>
+  <p>Jogo de aventura narrativa com gráficos estilizados e história envolvente.</p>
+</div>
+
+<div class="card-jogo" data-categoria="aventura">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/242760/capsule_616x353.jpg" alt="The Forest" />
+  <h4>The Forest</h4>
+  <p>Survival horror em mundo aberto com construção e combate contra mutantes.</p>
+</div>
+
+<div class="card-jogo" data-categoria="aventura">
+  <img src="https://notadogame.com/uploads/game/cover/250x/5bfdc3dc51a58.jpg" alt="Oxenfree" />
+  <h4>Oxenfree</h4>
+  <p>Aventura sobrenatural focada em narrativa e escolhas dos jogadores.</p>
+</div>
+
+<div class="card-jogo" data-categoria="aventura">
+  <img src="https://upload.wikimedia.org/wikipedia/pt/3/31/The_Walking_Dead%2C_Season_One_cover.jpeg" alt="The Walking Dead" />
+  <h4>The Walking Dead</h4>
+  <p>Aventura narrativa baseada na série, com decisões que impactam a história.</p>
+</div>
+
+<!-- RPG -->
+<div class="card-jogo" data-categoria="rpg">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/292030/capsule_616x353.jpg" alt="The Witcher 3" />
+  <h4>The Witcher 3: Wild Hunt</h4>
+  <p>RPG de mundo aberto com narrativa rica e missões profundas.</p>
+</div>
+
+<div class="card-jogo" data-categoria="rpg">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/capsule_616x353.jpg" alt="Cyberpunk 2077" />
+  <h4>Cyberpunk 2077</h4>
+  <p>RPG futurista em mundo aberto com ação intensa e personalização de personagem.</p>
+</div>
+
+<div class="card-jogo" data-categoria="rpg">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/435150/capsule_616x353.jpg" alt="Divinity: Original Sin 2" />
+  <h4>Divinity: Original Sin 2</h4>
+  <p>RPG isométrico com foco em estratégia e narrativa cooperativa.</p>
+</div>
+
+<div class="card-jogo" data-categoria="rpg">
+  <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/374320/capsule_616x353.jpg" alt="Dark Souls III" />
+  <h4>Dark Souls III</h4>
+  <p>RPG de ação desafiador com combate tenso e mundo sombrio.</p>
+</div>
+
+<div class="card-jogo" data-categoria="rpg">
+  <img src="https://upload.wikimedia.org/wikipedia/en/c/cc/Divinity_Original_Sin_cover.png" alt="Divinity: Original Sin" />
+  <h4>Divinity: Original Sin</h4>
+  <p>RPG clássico isométrico com muita liberdade e combate tático.</p>
+</div>
+
+<div class="card-jogo" data-categoria="rpg">
+  <img src="https://upload.wikimedia.org/wikipedia/pt/5/58/Dragon_Age_Inquisition_capa.png" alt="Dragon Age: Inquisition" />
+  <h4>Dragon Age: Inquisition</h4>
+  <p>RPG de fantasia com um vasto mundo aberto e narrativa envolvente.</p>
+</div>
+
+    </section>
+
+    <section id="noticias">
+  <h3>Notícias Recentes</h3>
+  <div class="lista-noticias">
+    <article class="card-noticia">
+      <h4>PixelForge anuncia novo jogo de RPG</h4>
+      <p>O estúdio PixelForge revelou hoje seu próximo lançamento, um RPG de mundo aberto com gráficos incríveis, narrativa profunda e um sistema inovador de escolhas que impactam o mundo do jogo.</p>
+      <span class="data-autor">Publicado em 12 de Junho de 2025 por <strong>@Xiru1</strong></span>
+    </article>
+    <article class="card-noticia">
+      <h4>Evento especial para fãs de ação</h4>
+      <p>Nos dias 10 e 11 de julho, acontecerá um evento online com torneios e desafios especiais para jogos de ação, reunindo jogadores do mundo inteiro para competir por prêmios exclusivos.</p>
+      <span class="data-autor">Publicado em 5 de Julho de 2025 por <strong>@Xiru2</strong></span>
+    </article>
+    <article class="card-noticia">
+      <h4>Atualização grátis para The Witcher 3</h4>
+      <p>A CD Projekt anunciou uma nova atualização gratuita para The Witcher 3, com melhorias visuais, correções de bugs e a inclusão de novos conteúdos que prometem agradar tanto veteranos quanto novos jogadores.</p>
+      <span class="data-autor">Publicado em 20 de Maio de 2025 por <strong>@Xiru3</strong></span>
+    </article>
+  </div>
+</section>
+
+
+
+
+    <section id="contato">
+      <h3>Contato</h3>
+      <form>
+        <input type="text" name="nome" placeholder="Nome" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="mensagem" placeholder="Mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Alpha Studios - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>

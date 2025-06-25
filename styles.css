@@ -1,0 +1,495 @@
+
+    :root {
+  --roxo: #3D348B;
+  --neon: #00F5FF;
+  --preto: #0A0A0A;
+  --branco: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; 
+}
+
+
+body {
+  margin: 0;
+  background-color: var(--preto);
+  color: var(--branco);
+  font-family: 'Orbitron', sans-serif;
+  min-height: 100vh;
+  background: url('./assets/img/wallpaper1.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+header {
+  background-color: var(--roxo);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 16px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+header a.logo {
+  display: flex;
+  align-items: center;
+  color: var(--neon);
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+header a.logo img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+}
+
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--neon);
+  color: var(--preto);
+}
+
+nav a.active {
+  background-color: var(--neon);
+  color: var(--preto);
+  pointer-events: none;
+}
+
+.menu-toggle {
+  display: none; 
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: var(--neon);
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 64px; 
+    right: 0;
+    background-color: var(--roxo);
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 99;
+  }
+
+  nav.active {
+    transform: translateX(0);
+  }
+
+  nav a {
+    padding: 12px 10px;
+    color: var(--neon);
+  }
+
+  .menu-toggle {
+    display: flex; 
+  }
+}
+
+
+main {
+  padding-top: 110px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+#trailer {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#trailer h2 {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  color: var(--neon);
+}
+
+#trailer p {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.carrossel {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carrossel-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carrossel iframe {
+  min-width: 100%;
+  height: 500px;
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 0 25px var(--neon);
+}
+
+.btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 245, 255, 0.6);
+  color: var(--preto);
+  border: none;
+  font-size: 2rem;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.anterior {
+  left: 10px;
+}
+
+.proximo {
+  right: 10px;
+}
+
+@media (max-width: 620px) {
+  .carrossel iframe {
+    height: 300px;
+  }
+}
+
+
+
+#jogos {
+  padding: 30px 20px 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+}
+
+#jogos h3 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--neon);
+  margin-bottom: 25px;
+}
+
+#categoria-selecionada {
+  text-align: center;
+  font-size: 1.6rem;
+  color: var(--neon);
+  margin-bottom: 20px;
+  min-height: 30px;
+}
+
+#filtros {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+#filtros button {
+  background-color: transparent;
+  border: 2px solid var(--neon);
+  color: var(--neon);
+  padding: 8px 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#filtros button:hover {
+  background-color: var(--neon);
+  color: var(--preto);
+}
+
+#filtros button.active {
+  background-color: var(--neon);
+  color: var(--preto);
+  pointer-events: none;
+}
+
+.lista-jogos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.card-jogo {
+  background-color: var(--preto);
+  width: 260px;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px var(--neon);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  transition: transform 0.3s ease, height 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-jogo img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 15px var(--neon);
+  flex-shrink: 0;
+}
+
+.card-jogo h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: var(--neon);
+  text-align: center;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card-jogo p {
+  color: #ccc;
+  font-size: 0.95rem;
+  text-align: center;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  line-height: 1.3em;
+  max-height: calc(1.3em * 6);
+  margin: 0;
+  transition: max-height 0.3s ease, -webkit-line-clamp 0.3s ease;
+}
+
+
+.card-jogo:hover {
+  transform: scale(1.05);
+  height: auto;
+}
+
+.card-jogo:hover p {
+  -webkit-line-clamp: unset; 
+  max-height: none; 
+}
+
+#noticias {
+  max-width: 1200px;
+  margin: 0 auto 50px auto;
+  padding: 0 20px;
+}
+
+#noticias h3 {
+  color: var(--neon);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.lista-noticias {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card-noticia {
+  background-color: var(--preto);
+  width: 300px;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 0 10px var(--neon);
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 280px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card-noticia:hover {
+  box-shadow: 0 0 20px var(--neon);
+}
+
+.card-noticia h4 {
+  color: var(--neon);
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.card-noticia p {
+  margin: 0 0 15px 0;
+  flex-grow: 1;
+  color: #ddd;
+}
+
+.data-autor {
+  font-size: 0.85rem; 
+  color: #888; 
+  font-style: italic;
+  text-align: right;
+}
+
+.data-autor strong {
+  color: var(--neon);
+}
+
+/* Responsividade */
+@media (max-width: 620px) {
+  .lista-noticias {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-noticia {
+    width: 90%;
+    min-height: auto;
+  }
+}
+
+
+/* Contato Section */
+#contato {
+  background-color: var(--roxo);
+  max-width: 600px;
+  margin: 0 auto 60px auto;
+  border-radius: 12px;
+  padding: 30px 25px;
+  box-shadow: 0 0 15px var(--neon);
+}
+
+#contato h3 {
+  color: var(--neon);
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form input,
+form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-family: 'Orbitron', sans-serif;
+  resize: none;
+}
+
+form input {
+  background-color: #121212;
+  color: var(--branco);
+}
+
+form textarea {
+  background-color: #121212;
+  color: var(--branco);
+  min-height: 100px;
+}
+
+form button {
+  background-color: var(--neon);
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #00c0c7;
+  color: var(--preto);
+}
+
+footer {
+  background-color: var(--roxo);
+  text-align: center;
+  padding: 16px 0;
+  color: var(--neon);
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Responsividade */
+
+@media (max-width: 620px) {
+  nav {
+    gap: 12px;
+  }
+
+  header a.logo {
+    font-size: 20px;
+  }
+
+  .card-jogo {
+    width: 100%;
+    height: auto;
+  }
+
+  #trailer iframe {
+    height: 300px;
+  }
+}
+
